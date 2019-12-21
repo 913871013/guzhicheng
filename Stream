@@ -3,3 +3,10 @@
                                                         .collect(Collectors.toList());将多个list合并成一个
 stream.foreach的操作是void的，除了更改属性值还可以进行其他操作等。因此要做“二次流处理”。
 stream.peek的操作是返回一个新的stream的，且设计的初衷是用来debug调试的，因此使用steam.peek()必须对流进行一次处理再产生一个新的stream。
+
+
+filter(Predicate p) 接收 Lambda ， 从流中排除某些元素。
+distinct() 筛选，通过流所生成元素的 hashCode() 和 equals() 去除重复元素
+limit(long maxSize) 截断流，使其元素不超过给定数量。
+skip(long n) 跳过元素，返回一个扔掉了前 n 个元素的流。若流中元素不足 n 个，则返回一个空流。与 limit(n) 互补
+
