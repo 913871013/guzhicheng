@@ -1,3 +1,5 @@
  List<String> flatMapList = playersInWorldCup2016.stream()
                                                         .flatMap(pList -> pList.stream())
                                                         .collect(Collectors.toList());将多个list合并成一个
+stream.foreach的操作是void的，除了更改属性值还可以进行其他操作等。因此要做“二次流处理”。
+stream.peek的操作是返回一个新的stream的，且设计的初衷是用来debug调试的，因此使用steam.peek()必须对流进行一次处理再产生一个新的stream。
