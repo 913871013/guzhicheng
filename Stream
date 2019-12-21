@@ -1,0 +1,3 @@
+ List<String> flatMapList = playersInWorldCup2016.stream()
+                                                        .flatMap(pList -> pList.stream())
+                                                        .collect(Collectors.toList());将多个list合并成一个
